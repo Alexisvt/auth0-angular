@@ -1,7 +1,8 @@
 mat-card {
-  width: 60vw;
+  width: 40vw;
 }
 
 table {
-  width: 100%;
+  min-width: auto !important;
+  width: 100% !important;
 }
