@@ -1,0 +1,12 @@
+<mat-toolbar fxLayout="row" fxLayoutGap="10px">
+  <span>{{ title }}</span>
+  <button mat-button (click)="login()">Login</button>
+  <ng-container *ngIf="isAuthenticated()">
+    <span>
+      Logged in as:
+      <img [src]="getProfile()['picture']" width="40" />
+      {{ getProfile()['name'] }}
+    </span>
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+  </ng-container>
+</mat-toolbar>
