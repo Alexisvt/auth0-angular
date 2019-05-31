@@ -46,9 +46,8 @@
         <input type="number" formControlName="price" matInput placeholder="price">
       </mat-form-field>
       <div>
-        <button mat-raised-button color="primary" mat-button>Add new item</button>
+        <button mat-raised-button color="primary" (click)="addNewItem()" mat-button>Add new item</button>
       </div>
     </form>
   </div>
-  {{form.value | json }}
 </div>

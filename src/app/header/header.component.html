@@ -1,6 +1,6 @@
 <mat-toolbar fxLayout="row" fxLayoutGap="10px">
   <span>{{ title }}</span>
-  <button mat-button (click)="login()">Login</button>
+  <button *ngIf="!isAuthenticated()" mat-button (click)="login()">Login</button>
   <ng-container *ngIf="isAuthenticated()">
     <span>
       Logged in as:
