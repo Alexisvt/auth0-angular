@@ -16,7 +16,7 @@ export class AuthService {
       clientID: '2f2ZbiynSVH0vtPs0nRJ6wraszzLSrFd',
       domain: 'speedurweb.auth0.com',
       responseType: 'token id_token',
-      audience: 'http://localhost:3000',
+      audience: 'http//localhost:3000',
       redirectUri: 'http://localhost:4200/login',
       scope: 'openid profile',
     };
