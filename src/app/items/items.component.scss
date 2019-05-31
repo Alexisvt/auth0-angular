@@ -1,8 +1,13 @@
-mat-card {
+mat-card,
+#add-section {
   width: 40vw;
 }
 
 table {
   min-width: auto !important;
   width: 100% !important;
+}
+
+form {
+  width: 100%;
 }

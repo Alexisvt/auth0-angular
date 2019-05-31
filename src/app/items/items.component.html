@@ -1,4 +1,4 @@
-<div fxLayout fxLayoutAlign="center start">
+<div fxLayout="column" fxLayoutAlign="start center">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Products</mat-card-title>
@@ -35,4 +35,19 @@
     </mat-card-content>
 
   </mat-card>
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <h3>Add a new Item</h3>
+    <form [formGroup]="form" fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="center center">
+      <mat-form-field>
+        <input formControlName="name" matInput placeholder="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" formControlName="price" matInput placeholder="price">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" mat-button>Add new item</button>
+      </div>
+    </form>
+  </div>
+  {{form.value | json }}
 </div>
