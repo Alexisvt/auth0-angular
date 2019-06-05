@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
   providedIn: 'root',
 })
 export class ItemsService {
-  private baseUrl = 'http://localhost:3000';
+  private API_URL = 'http://localhost:3000';
   constructor(private http: HttpClient, private auth: AuthService) {}
 
   // creates header
@@ -20,14 +20,14 @@ export class ItemsService {
   }
 
   public getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(this.baseUrl + '/items');
+    return this.http.get<Item[]>(this.API_URL + '/items');
   }
 
   public postItems(item: Item): Observable<Item> {
-    return this.http.post<Item>(this.baseUrl + '/items', item, this._authHeader());
+    return this.http.post<Item>(this.API_URL + '/items', item, this._authHeader());
   }
 
   public postToShoppingCart(): Observable<string> {
-    return this.http.post<string>(this.baseUrl + '/shopping-cart', '', this._authHeader());
+    return this.http.post<string>(this.API_URL + '/shopping-cart', '', this._authHeader());
   }
 }

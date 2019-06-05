@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 
 import { Item } from '../models/item.interface';
 import { AuthService } from '../services/auth.service';
-import { ItemFormService } from '../services/item-form.service';
+import { ItemFormService } from './services/item-form.service';
 import { ItemsService } from './services/items.service';
 
 @Component({
